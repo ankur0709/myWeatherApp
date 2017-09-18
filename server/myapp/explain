@@ -1,0 +1,16 @@
+to start-
+---create folder my app
+---cd myapp
+---npm init
+---npm install express --save mongoose body-parser
+---create app.js
+
+
+
+database-name:  Employee
+Collection name: employees
+properties: name, age ,gender
+
+to run in linux-
+   open terminal in folder and run --- node app
+   start db by-- mongo
