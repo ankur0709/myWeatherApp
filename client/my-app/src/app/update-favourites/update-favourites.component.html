@@ -1,0 +1,10 @@
+
+      <h5> cityname : {{favouriteupdate.city}}</h5>
+      <h5> Date:{{favouriteupdate.date}} </h5>
+      <h5> Max. Temperature : <input [(ngModel)]="updateData" placeholder="{{favouriteupdate.max_temp}}"> </h5>
+      <h5>Min. Temperature:  {{favouriteupdate.min_temp}}</h5>
+      <h5>Humidity:{{favouriteupdate.humidity}}</h5>   
+      <h5>Description:{{favouriteupdate.Description}}</h5>    
+
+      <button (click)= 'updateFav(favouriteupdate)'  class="btn btn-success">update</button>
+  

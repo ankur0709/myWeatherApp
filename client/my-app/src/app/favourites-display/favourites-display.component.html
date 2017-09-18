@@ -1,0 +1,22 @@
+<app-navbar-menu> </app-navbar-menu>
+<div class="container">
+<app-update-favourites *ngIf="update" [favouriteupdate]="update">  </app-update-favourites>
+<div class="favdetails">
+  <div class="row responsive-sm wrap">
+  <div class="col-md-4" *ngFor ="let favour of city">
+      <h5> cityname : {{favour.city}}</h5>
+      <h5> Date:{{favour.date}} </h5>
+      <h5> Max. Temperature :{{favour.max_temp}} </h5>
+      <h5>Min. Temperature:  {{favour.min_temp}}</h5>
+      <h5>Humidity:{{favour.humidity}}</h5>      
+      <button (click)= 'delFav(favour)' class="btn btn-danger">delete</button>
+      <button (click)= 'updateFav(favour)' class="btn btn-success">update</button>
+    </div>    
+    </div>
+    </div>
+</div>
+
+
+
+
+

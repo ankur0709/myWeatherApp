@@ -1,0 +1,22 @@
+<app-navbar-menu> </app-navbar-menu>
+<body>
+<div class="searchdiv">
+ <input [(ngModel)]="Cityname" placeholder="Enter city">
+  <button (click)="Search()" class="btn btn-primary">search</button>
+  <br>
+  <!-- <div *ngIf="Weather">
+    <ul  *ngFor ="let city of Weather.forecast.forecastday">
+    <li>{{Weather.location.name}}</li>
+    <li>{{city.date}}</li>
+    <li>{{city.day.maxtemp_c}}</li>
+    <li>{{city.day.mintemp_c}}</li>
+    <li>{{city.day.mintemp_c}}</li>
+     <li>{{city.day.avghumidity}}</li>
+    <li>{{city.day.condition.text}}</li>
+  </ul>
+  </div> -->
+  </div>
+</body>
+
+
+

@@ -1,0 +1,31 @@
+ <html>
+ <head>
+ </head>
+ <body>
+
+<div *ngIf="inputdata.forecast">    
+  <table class="table">
+  <thead>
+    <tr>
+      <th>City name</th>
+      <th>last updated</th>
+      <th>current temp</th>
+      <th>condition</th>
+      <th>humidity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{inputdata.location.name}}</td>
+      <td> {{inputdata.current.last_updated}}</td>
+      <td>{{inputdata.current.temp_c}}</td>
+      <td>{{inputdata.current.condition.text}}</td>
+      <td>{{inputdata.current.humidity}}</td>
+    </tr>
+  
+  </tbody>
+</table>
+  </div>
+  </body>
+  <br>
+  </html>

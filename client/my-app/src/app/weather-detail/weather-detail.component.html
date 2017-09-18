@@ -1,0 +1,16 @@
+  <div class="container">
+  <div  *ngIf="inputdata.forecast">
+  <div class="row responsive-sm wrap">
+  <div class=" list col-md-4" *ngFor ="let city of inputdata.forecast.forecastday">
+      <h4> cityname : </h4>{{inputdata.location.name}}
+      <h4> Date: </h4>{{city.date}}
+      <h4> Maximum Temperature :</h4>{{city.day.maxtemp_c}}
+      <h4>Minimum Temperature: </h4> {{city.day.mintemp_c}}
+      <h4>Humidity:</h4> {{city.day.avghumidity}}
+      <h4>Description: </h4>{{city.day.condition.text}}
+      <br>
+      <button class="btn btn-success" (click)=getWeatherData(city,inputdata.location.name)>Add to Favourites</button>
+      <br>
+    </div>
+</div>
+  </div>

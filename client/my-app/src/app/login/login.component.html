@@ -1,0 +1,88 @@
+<div class="container">
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">My Weather</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li>
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/register">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+
+   <form class="form-horizontal" role="form" method="POST" action="/register">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h2>Login /NewUser</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">            
+            
+            <div class="col-md-3">
+                <div class="form-control-feedback">
+                        <span class="text-danger align-middle">
+                            <!-- Put name validation error messages here -->
+                        </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="email">E-Mail Address</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                        <input type="text" name="email" [(ngModel)]="data.email"  class="form-control" id="email"
+                               placeholder="you@example.com" required autofocus>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-control-feedback">
+                        <span class="text-danger align-middle">
+                            <!-- Put e-mail validation error messages here -->
+                        </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="password">Password</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                        <input type="password" name="password" [(ngModel)]="data.password" class="form-control" id="password"
+                               placeholder="Password" required>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+       
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <button type="submit"  (click)=getdata(data) class="btn btn-success" ><i class="fa fa-user-plus"></i> Login</button>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-success"   routerLink="/register" (click)=storedata(data)><i class="fa fa-user-plus"></i> Register</button>
+            </div>
+        </div>
+    </form>
+</div>

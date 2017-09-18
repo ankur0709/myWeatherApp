@@ -1,0 +1,11 @@
+.searchdiv{
+	text-align: center;
+	margin-top: 10px;
+	font-size: 30px;
+
+}
+
+.searchdiv.input{
+	text-align: center;
+	size: 100px;	
+}
